@@ -4,11 +4,18 @@
 	font-family: $logo-navi-font;
 	@include font-size($logo-font-sizes);
 	font-weight: bold;
-	left: 60px;
+	left: 30px;
 	top: 40px;
 	position: absolute;
 	transition: 0.5s;
 	&:hover{
 		cursor: pointer;
+	}
+}
+
+@media (min-width: 640px){
+	.logo{
+		left: 60px;
+		top: 40px;
 	}
 }

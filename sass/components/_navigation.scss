@@ -1,15 +1,15 @@
 .navigation{
 	display: block;
 	left: 50%;
-	margin-left: -210px;
+	margin-left: -135px;
 	position: absolute;
-	top: 40px;
+	top: 100px;
 	&__list{
 		animation: 1s slide-down 1.2s backwards;
-		width: 420px;
+		width: 270px;
 		&__item{
 			display: inline-block;
-			margin: 10px 20px;
+			margin: 10px 10px;
 			text-align: center;
 			&__link{
 				color: $text-color-light;
@@ -24,14 +24,14 @@
 		background-color: $text-color-light;
 		color: $text-color-dark;
 		position: absolute;
-		right: 60px;
-		top: 40px;
+		right: 15px;
+		top: 30px;
 	}
 	&-dots{
 		animation: 1s slide-left 1.8s backwards;
 		margin-top: -72.5px;
 		position: absolute;
-		right: 76px;
+		right: 15px;
 		top: 50vh;
 		&__list{
 			&__item{
@@ -51,23 +51,39 @@
 		}
 	}
 }
-@keyframes down{
-	from {
-		opacity: 0;
-		transform: translateY(-40px);
-	}
-	to{
-		opacity: 1;
-		transform: translateY(0);
+
+@media (min-width: 640px){
+	.navigation{
+		top: 42px;
+		&-button{
+			right: 40px;
+		}
+		&-dots{
+			right: 30px;
+		}
 	}
 }
-@keyframes left{
-	from {
-		opacity: 0;
-		transform: translateX(60px);
-	}
-	to{
-		opacity: 1;
-		transform: translateX(0);
+
+@media (min-width: 900px){
+	.navigation{
+		margin-left: -210px;
+		top: 40px;
+		&__list{
+			width: 420px;
+			&__item{
+				margin: 10px 20px;
+				text-align: center;
+				&__link{
+					color: $text-color-light;
+				}
+			}
+		}
+		&-button{
+			right: 60px;
+			top: 40px;
+		}
+		&-dots{
+			right: 76px;
+		}
 	}
 }

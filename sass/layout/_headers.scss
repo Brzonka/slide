@@ -32,3 +32,18 @@
 	margin-top: 30px;
 	text-transform: uppercase;
 }
+
+@media (min-width: 1280px){
+	%header{
+		max-width: 1000px;
+	}
+	%header-small{
+		margin-bottom: 5px;
+		margin-top: 30px;
+	}
+
+	%header-smallest{
+		margin-bottom: 5px;
+		margin-top: 30px;
+	}
+}

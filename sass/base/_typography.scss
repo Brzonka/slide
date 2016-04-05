@@ -18,21 +18,25 @@ $header-middle-font: ('Raleway', sans-serif);
 
 //size
 $breakpoints: (
-  'small': 550px,
+  'small': 640px,
   'medium': 900px,
   'large': 1080px
 );
 $h1-font-sizes: (
   'null'  : 3em,
-  'medium': 6em,
+  'small': 4em,
+  'medium': 5em,
+  'large' : 6em
 );
 $h2-font-sizes: (
-  'null'  : 1.8em,
-  'medium': 2.0em,
-  'large' : 2.4em
+  'null'  : 3em,
+  'small': 4em,
+  'medium': 5em,
+  'large' : 6em
 );
 $h3-font-sizes: (
-  'null'  : 0.7em,
+  'null'  : 1.2em,
+  'small': 1.4em,
   'large' : 1.6em,
 );
 $h4-font-sizes: (
@@ -40,15 +44,18 @@ $h4-font-sizes: (
   'large' : 0.8em,
 );
 $description-large-font-sizes: (
-  'null'  : 0.9em,
+  'null'  : 1.6em,
+  'small': 2.2em,
   'large': 3.6em,
 );
 $description-middle-font-sizes: (
-  'null'  : 0.9em,
+  'null'  : 1.4em,
+  'small': 1.8em,
   'large': 2.2em,
 );
 $description-small-font-sizes: (
-  'null'  : 0.9em,
+  'null'  : 1.2em,
+  'small': 1.6em,
   'large': 2.0em,
 );
 $logo-font-sizes: (
@@ -57,6 +64,6 @@ $logo-font-sizes: (
 );
 
 $navi-font-sizes: (
-  'null'  : 0.5em,
-  'large' : 2.2em,
+  'null'  : 1.6em,
+  'medium' : 2.2em,
 );

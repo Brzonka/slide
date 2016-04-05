@@ -1,6 +1,8 @@
 .slide-one{
 	@include slide-template('../img/bg-1.jpg');
-	padding-top: 320px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 180px;
 	text-align: center;
 	&__header{
 		@extend %header;
@@ -20,11 +22,13 @@
 			margin-top: 25px;	
 		}
 		&-play{
-			@extend %button-play;
-			background: $text-color-light;	
+			animation: 1s slide-up 1.2s backwards;
+			@extend %button-circle;
+			background: $text-color-light;
+			display: none;
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: 56px;
+			margin-top: 25px;
 			&__icon{
 				fill: $text-color-dark;
 				height: 0.18in;
@@ -35,5 +39,40 @@
 			}
 		}
 
+	}
+}
+@media (min-width: 640px){
+	.slide-one{
+		padding-top: 220px;
+		padding-left: 70px;
+		padding-right: 70px;
+		&__button{
+			&-play{
+				display: block;
+				margin-top: 56px;
+			}
+		}
+	}
+}
+@media (min-width: 1280px){
+	.slide-one{
+		@include slide-template('../img/bg-1.jpg');
+		padding-top: 320px;
+		&__header{
+		}
+		&__description{
+		}
+		&__button{
+			&-start{
+				margin-top: 25px;	
+			}
+			&-play{
+				margin-top: 56px;
+				&__icon{
+
+				}
+			}
+
+		}
 	}
 }

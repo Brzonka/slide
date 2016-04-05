@@ -1,31 +1,5 @@
 $(document).ready(function(){
 
-//Fixed navigation
-	/*$(window).scroll(function(){
-		var scroll = $(window).scrollTop();
-		var height = $('.furniture').offset().top;
-		if (scroll>=height){
-			$('.navigation').addClass('navigation--fixed');
-			$('.logo').addClass('logo--fixed');
-		}
-		else{
-			$('.navigation').removeClass('navigation--fixed');
-			$('.logo').removeClass('logo--fixed');
-		}
-	});
-	$(window).resize(function(){
-		scroll = $(window).scrollTop();
-		height = $('.furniture').offset().top;
-		if (scroll>=height){
-			$('.navigation').addClass('navigation--fixed');
-			$('.logo').addClass('logo--fixed');
-		}
-		else{
-			$('.navigation').removeClass('navigation--fixed');
-			$('.logo').removeClass('logo--fixed');
-		}
-	});*/
-
 //Animation scroll and navigation scroll
 
 	var offset=[];
@@ -107,7 +81,7 @@ $(document).ready(function(){
 		var scroll=$(window).scrollTop();
 		var height_window=$(window).height();
 		if((scroll>=(offset[0]))&&(scroll<(offset[1]))){
-			$('.slide-one__header, .slide-one__description, .slide-two__button').css({"animation-play-state":"running"});
+			$('.slide-one__header, .slide-one__description, .slide-one__button-start').css({"animation-play-state":"running"});
 			$('.navigation-dots__list__item').removeClass('navigation-dots__list__item--check');
 			$('.navigation-dots__list__item:nth-child(1)').addClass('navigation-dots__list__item--check');}
 
@@ -131,30 +105,7 @@ $(document).ready(function(){
 			$('.navigation-dots__list__item').removeClass('navigation-dots__list__item--check');
 			$('.navigation-dots__list__item:nth-child(5)').addClass('navigation-dots__list__item--check');}
 
-//Menu open
-/*
-	$('.navigation__menu__hamburger').click(function(){
-			$('.navigation__list').slideToggle();
-	});
-	var w = $(window).width();
-	$(window).resize(function(){
-		w = $(window).width();
-	})
-	$(window).scroll(function(){
-		if (w<900){
-			$('.navigation__list:visible').slideUp();
-		}
-	});
-	$(window).resize(function(){
-		if (w<900){
-			$('.navigation__list:visible').slideUp();
-		}
-		else if (w>=900){
-		$('.navigation__list:hidden').slideDown();
-		$('.navigation__list').css({"display":"inline-block"});
-	}
-	});
-	*/
+
 	var running = false;
 	var handler = function (e) {
 	    if (running) {
@@ -185,7 +136,7 @@ $(document).ready(function(){
 	    //console.log(div, dir, divs.length);
 	    $('html,body').stop().animate(
 	        { scrollTop: divs.eq(div).offset().top }, // properties
-	        800,                                      // duration
+	        700,                                      // duration
 	        "swing",                                  // easing (needed to use 4th argument)
 	        function(){ running = false; }            // animation complete callback
 	    );

@@ -1,27 +1,28 @@
 .slide-four{
 	@include slide-template('../img/bg-4.jpg');
-	padding-top: 250px;
-	padding-left: 160px;
-	position: relative;
-	text-align: left;
-	&__header{
-		@extend %header;
-	}
-	&__description{
-		@extend %description-middle;
-	}
-	&__small-section{
-		&__header{
-			@extend %header-small;
-		}
-		&__description{
-		@extend %description-small;
-		}
-	}
+	@include slide-regular;
 	&__img{
-		animation: 1s slide-left backwards 1.2s paused; 
-		bottom: 0;
-		position: absolute;
-		right: 150px;
+		right: 20px;
+		width: 35%;
+	}
+}
+@media (min-width: 900px){
+	.slide-four{
+	  padding-top: 180px;
+	  padding-left: 160px;
+	  text-align: left;
+	  &__img{
+	    display: block;
+	    right: 130px;
+	  }
+	}
+}
+@media (min-width: 1440px){
+	.slide-four{
+	  padding-top: 250px;
+	  &__img{
+	    width: auto;
+	    right: 150px;
+	  }
 	}
 }

@@ -25,12 +25,24 @@
 	@include font-size($description-middle-font-sizes);
 	line-height: 150%;
 	margin-top: 10px;
-	margin-bottom: 20px;
-	max-width: calc(50% - 50px);
+	margin-bottom: -20px;
 }
 %description-small{
 	animation: 1s slide-up backwards 0.9s paused;
 	@include font-size($description-small-font-sizes);
 	line-height: 130%;
 	max-width: 300px;
+}
+@media (min-width: 640px){
+	%description-large{
+		max-width: 1000px;
+	}
+	%description-middle{
+		margin-top: 10px;
+		margin-bottom: 20px;
+		max-width: calc(50% - 50px);
+	}
+	%description-small{
+		max-width: 300px;
+	}
 }

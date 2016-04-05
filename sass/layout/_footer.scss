@@ -1,18 +1,17 @@
 .footer{
 	&-info{
 		animation: 1s slide-right 2s backwards;
-		bottom: 52px;
+		bottom: 12px;
 		color: $text-color-light;
-		display: inline-block;
+		display: none;
 		font-family: $logo-navi-font;
-		left: 60px;
 		position: absolute;
 		@include font-size($navi-font-sizes);
 		&__icon{
 			fill: $text-color-light;
 			display: inline-block;
-			height: 0.22in;
-			width: 0.22in;
+			height: 0.18in;
+			width: 0.18in;
 		}
 	}
 	&-link{
@@ -25,6 +24,20 @@
 			fill: $text-color-light;
 			height: 0.3in;
 			width: 0.3in;
+		}
+	}
+}
+
+@media (min-width: 640px){
+	.footer{
+		&-info{
+			bottom: 52px;
+			display: inline-block;
+			left: 60px;
+			&__icon{
+				height: 0.22in;
+				width: 0.22in;
+			}
 		}
 	}
 }
