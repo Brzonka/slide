@@ -1,0 +1,14 @@
+.logo{
+	animation: 1s slide-down 2.4s backwards;
+	color: $text-color-light;
+	font-family: $logo-navi-font;
+	@include font-size($logo-font-sizes);
+	font-weight: bold;
+	left: 60px;
+	top: 40px;
+	position: absolute;
+	transition: 0.5s;
+	&:hover{
+		cursor: pointer;
+	}
+}

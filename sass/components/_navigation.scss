@@ -1,0 +1,73 @@
+.navigation{
+	display: block;
+	left: 50%;
+	margin-left: -210px;
+	position: absolute;
+	top: 40px;
+	&__list{
+		animation: 1s slide-down 1.2s backwards;
+		width: 420px;
+		&__item{
+			display: inline-block;
+			margin: 10px 20px;
+			text-align: center;
+			&__link{
+				color: $text-color-light;
+				@include font-size($navi-font-sizes);
+			}
+		}
+	}
+	&-button{
+		animation: 1s slide-left 1.5s backwards;
+		@extend %button;
+		@include font-size($navi-font-sizes);
+		background-color: $text-color-light;
+		color: $text-color-dark;
+		position: absolute;
+		right: 60px;
+		top: 40px;
+	}
+	&-dots{
+		animation: 1s slide-left 1.8s backwards;
+		margin-top: -72.5px;
+		position: absolute;
+		right: 76px;
+		top: 50vh;
+		&__list{
+			&__item{
+				background-color: $dot-color;
+				border-radius: 15px;
+				display: block;
+				height: 15px;
+				padding: 1px;
+				width: 15px;
+				&:not(:last-child){
+					margin-bottom: 15px;
+				}
+				&--check{
+					background-color: $text-color-light;
+				}
+			}
+		}
+	}
+}
+@keyframes down{
+	from {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes left{
+	from {
+		opacity: 0;
+		transform: translateX(60px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

@@ -1,0 +1,36 @@
+%description{
+	&-large,
+	&-middle,
+	&-small{
+		display: inline-block;
+		font-family: $description-font;
+	}
+	&-middle,
+	&-small{
+		color: $grey-light;
+		display: inline-block;
+		font-family: $description-font;
+		font-weight: bold;
+	}
+}
+%description-large{
+	animation: 1s slide-up backwards 0.3s paused; 
+	color: $text-color-light;
+	@include font-size($description-large-font-sizes);
+	line-height: 150%;
+	max-width: 1000px;
+}
+%description-middle{
+	animation: 1s slide-up backwards 0.3s paused;
+	@include font-size($description-middle-font-sizes);
+	line-height: 150%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	max-width: calc(50% - 50px);
+}
+%description-small{
+	animation: 1s slide-up backwards 0.9s paused;
+	@include font-size($description-small-font-sizes);
+	line-height: 130%;
+	max-width: 300px;
+}

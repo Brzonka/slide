@@ -1,0 +1,39 @@
+.slide-one{
+	@include slide-template('../img/bg-1.jpg');
+	padding-top: 320px;
+	text-align: center;
+	&__header{
+		@extend %header;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__description{
+		@extend %description-large;
+	}
+	&__button{
+		&-start{
+			@extend %button;
+			@extend %header-small;
+			background: $second-color;	
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 25px;	
+		}
+		&-play{
+			@extend %button-play;
+			background: $text-color-light;	
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 56px;
+			&__icon{
+				fill: $text-color-dark;
+				height: 0.18in;
+				margin-bottom: -3px;
+				margin-right: -5px;
+				overflow: visible;
+				width: 0.18in;
+			}
+		}
+
+	}
+}

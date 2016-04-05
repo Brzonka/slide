@@ -1,0 +1,19 @@
+body{
+	background-color: $text-color-light;
+	font-family: ('Montserrat', sans-serif);	
+	font-size: 62.5%;
+	min-width: 300px;
+	overflow: hidden;
+}
+.page{
+	&-header,
+	&-footer{
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+	}
+}
+.page-footer{
+	bottom: 0;
+	left: 0;
+}

@@ -1,0 +1,30 @@
+.footer{
+	&-info{
+		animation: 1s slide-right 2s backwards;
+		bottom: 52px;
+		color: $text-color-light;
+		display: inline-block;
+		font-family: $logo-navi-font;
+		left: 60px;
+		position: absolute;
+		@include font-size($navi-font-sizes);
+		&__icon{
+			fill: $text-color-light;
+			display: inline-block;
+			height: 0.22in;
+			width: 0.22in;
+		}
+	}
+	&-link{
+		animation: 1s slide-up 2.2s backwards;
+		bottom: 52px;
+		left: 50%;
+		margin-left: -15px;
+		position: absolute;
+		&__icon{
+			fill: $text-color-light;
+			height: 0.3in;
+			width: 0.3in;
+		}
+	}
+}

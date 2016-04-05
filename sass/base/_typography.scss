@@ -1,0 +1,62 @@
+//Colors
+$light-green: rgb(65, 187, 153);
+$white: rgb(255, 255, 255);
+$grey: rgb(48, 48, 48);
+$grey-light: rgb(212, 212, 212);
+$second-color: $light-green;
+$text-color-dark: $grey;
+$text-color-darklight: $grey-light;
+$text-color-light: $white;
+$bg-mask: rgba(112, 113, 114, 0.8);
+$dot-color: rgba(192, 193, 194, 0.7);
+//Fonts:
+//style
+$description-font: ('Source Sans Pro', sans-serif);
+$header-font: ('Playfair Display', serif);
+$logo-navi-font: ('PT Sans', sans-serif);
+$header-middle-font: ('Raleway', sans-serif);
+
+//size
+$breakpoints: (
+  'small': 550px,
+  'medium': 900px,
+  'large': 1080px
+);
+$h1-font-sizes: (
+  'null'  : 3em,
+  'medium': 6em,
+);
+$h2-font-sizes: (
+  'null'  : 1.8em,
+  'medium': 2.0em,
+  'large' : 2.4em
+);
+$h3-font-sizes: (
+  'null'  : 0.7em,
+  'large' : 1.6em,
+);
+$h4-font-sizes: (
+  'null'  : 0.7em,
+  'large' : 0.8em,
+);
+$description-large-font-sizes: (
+  'null'  : 0.9em,
+  'large': 3.6em,
+);
+$description-middle-font-sizes: (
+  'null'  : 0.9em,
+  'large': 2.2em,
+);
+$description-small-font-sizes: (
+  'null'  : 0.9em,
+  'large': 2.0em,
+);
+$logo-font-sizes: (
+  'null'  : 2.3em,
+  'medium' : 4.2em,
+);
+
+$navi-font-sizes: (
+  'null'  : 0.5em,
+  'large' : 2.2em,
+);
