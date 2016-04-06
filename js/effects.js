@@ -101,7 +101,7 @@ $(document).ready(function(){
 			$('.navigation-dots__list__item:nth-child(4)').addClass('navigation-dots__list__item--check');}
 
 		if(scroll>=(offset[4])){
-			$('.slide-five__header .video__header, .video__description, .video__button').css({"animation-play-state":"running"});
+			$('.slide-five__header, .slide-five__table__cell__header, .slide-five__table__cell__description').css({"animation-play-state":"running"});
 			$('.navigation-dots__list__item').removeClass('navigation-dots__list__item--check');
 			$('.navigation-dots__list__item:nth-child(5)').addClass('navigation-dots__list__item--check');}
 
