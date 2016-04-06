@@ -106,43 +106,43 @@ $(document).ready(function(){
 			$('.navigation-dots__list__item:nth-child(5)').addClass('navigation-dots__list__item--check');}
 
 
-	var running = false;
-	var handler = function (e) {
-	    if (running) {
-	        return;
-	    }
-	    running = true;
-	    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-	        dir = 'down';
-	    } else {
-	        dir = 'up';
-	    }
-	    // find currently visible div :
-	    div = -5;
-	    divs = $('.slide-one, .slide-two, .slide-three, .slide-four, .slide-five');
-	    divs.each(function(i){
-	        if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
-	            div = i;
-	        }
-	    });
-	    if (dir == 'up' && div > 0) {
-	        div--;
-	    }
-	    if (dir == 'down' && div < divs.length) {
-	        div++;
-	    }
+var running = false;
+var handler = function (e) {
+	if (running) {
+		return;
+	}
+	running = true;
+	if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+		dir = 'down';
+	}
+	else {
+		dir = 'up';
+	}
+	div = -5;
+	divs = $('.slide-one, .slide-two, .slide-three, .slide-four, .slide-five');
+	divs.each(function(i){
+		if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+			div = i;
+		}
+	});
+	if (dir == 'up' && div > 0) {
+		div--;
+	}
+	if (dir == 'down' && div < divs.length) {
+		div++;
+	}
+	if (dir == 'down' && div == divs.length) {
+		div--;
+	}
+	$('html,body').stop().animate(
+	{ scrollTop: divs.eq(div).offset().top },
+	700,
+	"swing",
+	function(){ running = false; }
+	);
 
-
-	    //console.log(div, dir, divs.length);
-	    $('html,body').stop().animate(
-	        { scrollTop: divs.eq(div).offset().top }, // properties
-	        700,                                      // duration
-	        "swing",                                  // easing (needed to use 4th argument)
-	        function(){ running = false; }            // animation complete callback
-	    );
-
-	    return false;
-	};
+	return false;
+};
 
 $(document.body).on('DOMMouseScroll mousewheel', handler );
 
